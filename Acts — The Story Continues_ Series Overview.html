@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Acts — The Story Continues: Series Overview</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{--bg:#f2f5f7;--card:#fff;--ink:#1b2a38;--mute:#5b6b79;--line:#d3dde4;--blue:#2c6e8e;--gold:#e0a23a;--goldsoft:#fbf0d9;--bluesoft:#e3eff5;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121b23;--card:#1a2733;--ink:#e8eef2;--mute:#9db0be;--line:#2b3b48;--blue:#6fb3d2;--gold:#f0b94f;--goldsoft:#33291a;--bluesoft:#1b3040}}
+:root[data-theme="dark"]{--bg:#121b23;--card:#1a2733;--ink:#e8eef2;--mute:#9db0be;--line:#2b3b48;--blue:#6fb3d2;--gold:#f0b94f;--goldsoft:#33291a;--bluesoft:#1b3040}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.6 "Source Serif 4",Georgia,serif}
+h1,h2,h3,summary,.sans{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:0 20px 80px}
+header{padding:56px 0 28px}
+h1{font-size:clamp(2.2rem,7vw,3.8rem);line-height:1.05;margin:0 0 10px;letter-spacing:-.02em}
+.sub{color:var(--mute);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1rem}
+.big{font-size:1.35rem;line-height:1.45;margin:26px 0 0;max-width:34em}
+h2{font-size:1.5rem;margin:56px 0 14px;letter-spacing:-.01em}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.pillar{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.pillar b{font-family:"Bricolage Grotesque",system-ui,sans-serif;display:block;margin-bottom:4px;font-size:1.05rem}
+.pillar span{color:var(--mute);font-size:.98rem;line-height:1.5}
+.map{background:var(--bluesoft);border-radius:12px;padding:20px 18px 14px}
+.map-labels{display:flex;justify-content:space-between;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:.85rem;color:var(--mute);margin-bottom:10px}
+.stops{display:flex;gap:0;overflow-x:auto;padding-bottom:6px}
+.stops a{flex:1 0 108px;text-decoration:none;color:var(--ink);text-align:center;padding:0 4px;position:relative}
+.stops a::before{content:"";position:absolute;top:13px;left:0;right:0;height:3px;background:var(--blue);opacity:.5}
+.stops a:first-child::before{left:50%}.stops a:last-child::before{right:50%}
+.dot{position:relative;display:grid;place-items:center;width:28px;height:28px;margin:0 auto 8px;border-radius:50%;background:var(--blue);color:#fff;font:700 .85rem "Bricolage Grotesque",system-ui,sans-serif}
+.stops a:last-child .dot{background:var(--gold);color:#1b2a38}
+.stops strong{display:block;font:600 .88rem/1.25 "Bricolage Grotesque",system-ui,sans-serif}
+.stops small{color:var(--mute);font-size:.78rem}
+.tools{display:flex;justify-content:space-between;align-items:center;margin:56px 0 14px}
+.tools h2{margin:0}
+button{font:600 .85rem "Bricolage Grotesque",system-ui,sans-serif;background:none;color:var(--blue);border:1.5px solid var(--blue);border-radius:99px;padding:6px 14px;cursor:pointer}
+button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+details{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:10px;margin-bottom:12px}
+details[open]{border-left-color:var(--gold)}
+summary{list-style:none;cursor:pointer;padding:16px 18px;display:grid;grid-template-columns:auto 1fr auto;gap:2px 14px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+.wk{grid-row:span 2;font-weight:700;font-size:.85rem;color:var(--blue);text-align:center;line-height:1.1}
+.wk em{display:block;font-style:normal;font-size:1.7rem;color:var(--ink)}
+summary h3{margin:0;font-size:1.35rem;line-height:1.2}
+.ref{font-size:.9rem;color:var(--mute);font-weight:500;white-space:nowrap}
+.dir{grid-column:2/4;font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:400;color:var(--ink);font-size:1rem;line-height:1.45;margin-top:4px}
+.chev{display:none}
+.body{padding:2px 18px 18px 18px;border-top:1px dashed var(--line);margin:0 0 0 0}
+.body p{margin:14px 0 0;max-width:38em}
+.body .lab{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:.95rem;color:var(--blue)}
+.callout{background:var(--goldsoft);border-radius:10px;padding:16px 20px;margin:0 0 14px;font-size:1.2rem;line-height:1.45}
+.callout small{display:block;font:500 .9rem "Bricolage Grotesque",system-ui,sans-serif;color:var(--mute);margin-top:6px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font:600 .9rem "Bricolage Grotesque",system-ui,sans-serif}
+.chain span{background:var(--bluesoft);border-radius:99px;padding:6px 12px}
+.chain i{font-style:normal;color:var(--mute)}
+.end{margin-top:18px;font-size:1.15rem}
+@media (max-width:520px){summary{grid-template-columns:auto 1fr}.ref{grid-column:2}.dir{grid-column:1/3}.wk{grid-row:span 2}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="sub">7-week sermon series · Acts 1–8 · Narrative approach</div>
+  <h1>Acts — The Story Continues</h1>
+  <p class="big">The story of Jesus doesn’t end with the Gospels. It keeps going through the Holy Spirit working in ordinary people — including us.</p>
+</header>
+
+<section>
+  <h2>The point, in three lines</h2>
+  <div class="pillars">
+    <div class="pillar"><b>Jesus is still at work</b><span>Acts isn’t about heroic apostles or a perfect church. It’s what Jesus keeps doing through ordinary, Spirit-empowered people.</span></div>
+    <div class="pillar"><b>The story keeps getting bigger</b><span>Again and again, people learn that God’s work is larger than they assumed. There is more to the story than we thought.</span></div>
+    <div class="pillar"><b>We’re in it, not starring in it</b><span>We aren’t watching the story, and we aren’t the main character. Jesus stays at the center; we participate.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>The map</h2>
+  <div class="map">
+    <div class="map-labels"><span>Jerusalem → Judea → Samaria</span><span>the ends of the earth</span></div>
+    <div class="stops">
+      <a href="#w1"><div class="dot">1</div><strong>The Story Continues</strong><small>Acts 1:1–11</small></a>
+      <a href="#w2"><div class="dot">2</div><strong>The People We Pass By</strong><small>Acts 3:1–10</small></a>
+      <a href="#w3"><div class="dot">3</div><strong>Telling What We’ve Seen</strong><small>Acts 3:11–26</small></a>
+      <a href="#w4"><div class="dot">4</div><strong>Ordinary People</strong><small>Acts 4:1–22</small></a>
+      <a href="#w5"><div class="dot">5</div><strong>A People</strong><small>Acts 4:23–37</small></a>
+      <a href="#w6"><div class="dot">6</div><strong>Growing Pains</strong><small>Acts 6:1–7</small></a>
+      <a href="#w7"><div class="dot">7</div><strong>The Story Gets Bigger</strong><small>Acts 8:26–40</small></a>
+    </div>
+  </div>
+  <p style="color:var(--mute);font-size:.98rem;margin-top:12px">We’re not going verse by verse. This is a map, not an itinerary: we follow the story and stop where it turns, expands, or shows us something about Jesus, the Spirit, and God’s people. The goal isn’t to cover Acts. It’s to discover its story together.</p>
+</section>
+
+<div class="tools"><h2>The 7 weeks</h2><button id="tog" type="button">Expand all</button></div>
+
+<details id="w1"><summary><div class="wk">WEEK<em>1</em></div><h3>The Story Continues</h3><span class="ref">Acts 1:1–11</span><div class="dir">What does it mean to live in the part of the story where Jesus has ascended, the Spirit is coming, and the story is still unfolding?</div></summary>
+<div class="body"><p><span class="lab">What happens.</span> Luke ties Acts straight to his Gospel: Jesus’ story isn’t finished. Jesus ascends, but the disciples aren’t handed a story to manage alone. They’re told to wait for the Spirit, then given the direction of the story: Jerusalem → Judea → Samaria → the ends of the earth.</p><p><span class="lab">Why it matters.</span> This week is the foundation. It sets the map for everything that follows.</p></div></details>
+
+<details id="w2"><summary><div class="wk">WEEK<em>2</em></div><h3>The People We Pass By</h3><span class="ref">Acts 3:1–10</span><div class="dir">The Spirit sends us toward people we might otherwise pass by.</div></summary>
+<div class="body"><p><span class="lab">What happens.</span> Peter and John meet the man at the temple gate. Jesus’ story continues through an encounter with someone who could easily have stayed invisible.</p><p><span class="lab">Watch out for.</span> This isn’t a lesson on doing more ministry. We’ll look at what the text says about seeing people, presence, healing, and the continuing work of Jesus.</p></div></details>
+
+<details id="w3"><summary><div class="wk">WEEK<em>3</em></div><h3>Telling What We’ve Seen</h3><span class="ref">Acts 3:11–26</span><div class="dir">Witness begins with telling what we’ve seen God do.</div></summary>
+<div class="body"><p><span class="lab">What happens.</span> The miracle becomes Peter’s opening to tell the story of Jesus. What God has done isn’t something he can keep to himself.</p><p><span class="lab">Why it matters.</span> Witness here isn’t a technique or a program. It’s participation in the story God is already telling.</p></div></details>
+
+<details id="w4"><summary><div class="wk">WEEK<em>4</em></div><h3>Ordinary People</h3><span class="ref">Acts 4:1–22</span><div class="dir">People who have been with Jesus can become courageous witnesses.</div></summary>
+<div class="body"><p><span class="lab">What happens.</span> Peter and John are hauled before the authorities, who notice something about them: ordinary people who have been with Jesus. Their courage doesn’t come from status, education, or institutional power.</p><p><span class="lab">Why it matters.</span> A key part of the Acts imagination: God’s work isn’t reserved for professionals or experts.</p></div></details>
+
+<details id="w5"><summary><div class="wk">WEEK<em>5</em></div><h3>A People</h3><span class="ref">Acts 4:23–37</span><div class="dir">What happens when Jesus’ story doesn’t just change individuals, but forms a people together?</div></summary>
+<div class="body"><p><span class="lab">What happens.</span> Facing opposition, the church prays together. Then Luke describes their shared life: unity, generosity, worship, and care for one another.</p><p><span class="lab">Why it matters.</span> The Spirit isn’t only empowering individuals. God is forming a people. This may become one of the central church-identity passages of the series.</p></div></details>
+
+<details id="w6"><summary><div class="wk">WEEK<em>6</em></div><h3>Growing Pains</h3><span class="ref">Acts 6:1–7</span><div class="dir">Spirit-filled churches still have problems. Faithfulness means learning how to grow together.</div></summary>
+<div class="body"><p><span class="lab">What happens.</span> The church has grown, and some widows are being neglected. The apostles don’t try to fix everything personally. The community names the problem, develops leaders, and builds a structure so ministry can continue.</p><p><span class="lab">Watch out for.</span> Acts doesn’t present a perfect church; growth creates new challenges. We’ll explore leadership, shared responsibility, and making room for people, without turning the sermon into a lesson on church administration.</p></div></details>
+
+<details id="w7"><summary><div class="wk">WEEK<em>7</em></div><h3>The Story Gets Bigger</h3><span class="ref">Acts 8:26–40</span><div class="dir">What happens when we become attentive to the people and places the Spirit leads us toward?</div></summary>
+<div class="body"><p><span class="lab">What happens.</span> The Spirit leads Philip down an unexpected road to an unexpected person. A conversation begins around Scripture, Philip helps the man understand Jesus, and the Ethiopian is baptized.</p><p><span class="lab">Why it ends here.</span> The story that began in Jerusalem is now reaching far beyond the boundaries the disciples first imagined. It’s a natural stopping point, not a finish line.</p></div></details>
+
+<section>
+  <h2>Threads that run through every week</h2>
+  <div class="callout">“I am not watching the story. I am in the story.”<small>…and the second half: I am not the main character. Jesus stays at the center.</small></div>
+  <div class="callout" style="background:var(--bluesoft)">“There is more to the story than we thought.”<small>Disciples, Jerusalem, Peter, Philip: each finds God’s work is bigger than they assumed.</small></div>
+</section>
+
+<section>
+  <h2>Why this matters for us, now</h2>
+  <div class="two">
+    <div class="pillar"><b>God didn’t stop working</b><span>The story didn’t end with a previous generation, with the “old-time religion” we remember, or with an experience we once had with God.</span></div>
+    <div class="pillar"><b>Expect, and be surprised</b><span>Acts gives us imagination for a church that expects God to keep working, while staying humble enough to let God surprise us about what that looks like.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>The larger movement</h2>
+  <div class="chain"><span>Jesus continues His work</span><i>→</i><span>The Spirit comes</span><i>→</i><span>Ordinary people participate</span><i>→</i><span>A people is formed</span><i>→</i><span>The church learns through faithfulness and failure</span><i>→</i><span>The boundaries expand</span><i>→</i><span>The story keeps going</span></div>
+  <p class="end">We leave this first journey here, not because the story is finished, but because <b>the story continues.</b> Future series can pick up at Acts 9 and beyond.</p>
+</section>
+</main>
+<script>
+var b=document.getElementById('tog'),d=document.querySelectorAll('details');
+b.addEventListener('click',function(){var open=b.textContent==='Expand all';d.forEach(function(x){x.open=open});b.textContent=open?'Collapse all':'Expand all'});
+if(location.hash){var t=document.querySelector(location.hash);if(t&&t.tagName==='DETAILS')t.open=true}
+document.querySelectorAll('.stops a').forEach(function(a){a.addEventListener('click',function(){var t=document.querySelector(a.getAttribute('href'));if(t)t.open=true})});
+</script>
+</body>
+</html>
